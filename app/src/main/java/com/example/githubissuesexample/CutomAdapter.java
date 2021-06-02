@@ -2,33 +2,29 @@ package com.example.githubissuesexample;
 
 import android.content.Context;
 import android.content.Intent;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
+
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.GET;
+
 
 public class CutomAdapter extends RecyclerView.Adapter<CutomAdapter.CustomViewHolder> {
 
     private List<Issues> datalist;
-    private List<Comments> dataComent;
+
     private Context context;
     private String commentUrl;
-    String[] val;
 
-    String str;
+
+
 
     public CutomAdapter(List<Issues> datalist, Context context) {
         this.datalist = datalist;
@@ -46,7 +42,7 @@ public class CutomAdapter extends RecyclerView.Adapter<CutomAdapter.CustomViewHo
     @Override
     public void onBindViewHolder(CutomAdapter.CustomViewHolder holder, int position) {
         holder.title.setText(datalist.get(position).getTitle());
-        holder.body.setText(datalist.get(position).getBody());
+        holder.body.setText(Html.fromHtml(datalist.get(position).getBody()));
        // holder.comment.setText(datalist.get(position).getCommentURL());
         commentUrl= datalist.get(position).getCommentURL();
         //commentUrl=  holder.comment.getText().toString();
@@ -101,7 +97,7 @@ public class CutomAdapter extends RecyclerView.Adapter<CutomAdapter.CustomViewHo
          private View mview;
          private TextView title;
          private TextView body;
-         private TextView comment;
+
 
 
 

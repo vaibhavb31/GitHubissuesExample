@@ -72,6 +72,7 @@
             android:layout_marginTop="65dp"
             android:layout_marginRight="25dp"
             android:paddingRight="10dp"
+
             android:textColor="#353434"
             android:textSize="16sp" />
 

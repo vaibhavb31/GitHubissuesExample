@@ -41,7 +41,7 @@ public class Dest extends AppCompatActivity {
         call1.enqueue(new Callback<List<Comments>>() {
             @Override
             public void onResponse(Call<List<Comments>> call1, Response<List<Comments>> response) {
-                Toast.makeText(Dest.this, "test", Toast.LENGTH_LONG).show();
+              //  Toast.makeText(Dest.this, "test", Toast.LENGTH_LONG).show();
                 getComment(response.body());
 
 
@@ -50,7 +50,7 @@ public class Dest extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<Comments>> call1, Throwable t) {
 
-                Toast.makeText(Dest.this, t.getMessage(), Toast.LENGTH_LONG).show();
+               // Toast.makeText(Dest.this, t.getMessage(), Toast.LENGTH_LONG).show();
 
 
             }

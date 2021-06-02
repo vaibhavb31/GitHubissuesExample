@@ -57,8 +57,8 @@ import java.util.List;
      public void onBindViewHolder(CustomCommentAdapter.CutomCommentViewHolder holder, int position) {
 
         String cal=dataComments.get(position).getBody();
-        if(cal=="") {
-            holder.body.setText("No Comments Found");
+        if(cal.isEmpty()) {
+           // holder.body.setText("No Comments Found");
         }
         else{
             holder.body.setText(dataComments.get(position).getBody());

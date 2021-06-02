@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<List<Issues>>() {
             @Override
             public void onResponse(Call<List<Issues>> call, Response<List<Issues>> response) {
-               Toast.makeText(MainActivity.this,"hello inside issue",Toast.LENGTH_LONG).show();
+               //Toast.makeText(MainActivity.this,"hello inside issue",Toast.LENGTH_LONG).show();
                 getDataService(response.body());
 
             }
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<Issues>> call, Throwable t) {
 
-                Toast.makeText(MainActivity.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
 
 
             }
